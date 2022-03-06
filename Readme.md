@@ -49,7 +49,7 @@ plt.show()"""
 
 ```
 
-TVerilerin işlenmesi
+Fourier dönüşümlerin yapıldığı bölüm
 
 ```python
 ########### FFT Computation ################
@@ -73,7 +73,7 @@ plt.ylabel("Amplitude, units")
 plt.show()"""
 ```
 
-Daha sonra 
+Sinyalin filtrelendiği bölüm
 
 ```python
 # Genlik değeri 200'ün üzerinde olan frekanslar listelenir
