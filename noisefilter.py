@@ -7,7 +7,7 @@ plt.rcParams['figure.figsize'] = [16, 12]
 plt.rcParams.update({'font.size': 18})
 
 ###################### Take input file and create variables
-fs, data = wavfile.read('./sound1.wav')
+fs, data = wavfile.read('./input.wav')
 f = (data / 2.0**31)
 nyq = fs/2
 dt = 1/fs
@@ -15,19 +15,12 @@ n = f.shape[0]
 duration = n/fs
 time = np.arange(0,duration,dt)
 
-plt.plot(time, f, 'b')
-plt.show()
 ####################### FFT Computation
 signal = f[:,0]
 data_fft = rfft(signal)
 freq = rfftfreq(signal.size, d=1./fs)
 L = np.arange(1,np.floor(n/2),dtype='int')
 data_fft_abs = np.abs(data_fft)
-
-plt.plot(freq, data_fft_abs)
-plt.xlabel("frequency, Hz")
-plt.ylabel("Amplitude, units")
-plt.show()
 
 # Looking at amplitudes of the spikes higher than 200
 """for i,f in enumerate(data_fft_abs):
@@ -42,8 +35,6 @@ for i,f in enumerate(freq):
         data_fft[i] = 0.0
 
 output = irfft(data_fft)
-
-
 
 ####################### Plots
 fig,axs = plt.subplots(3,1)
