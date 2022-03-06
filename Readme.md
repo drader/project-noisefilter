@@ -44,8 +44,8 @@ duration = n/fs      # süre (sn)
 time = np.arange(0,duration,dt)
 
 # Girdi dosyasının zaman alanındaki çıktısı
-plt.plot(time, f, 'b')
-plt.show()
+"""plt.plot(time, f, 'b')
+plt.show()"""
 
 ```
 
@@ -67,10 +67,10 @@ L = np.arange(1,np.floor(n/2),dtype='int')
 data_fft_abs = np.abs(data_fft)
 
 # Genlik değerleriyle frekans alanında çıktımız oluşturulur
-plt.plot(freq, data_fft_abs)
+"""plt.plot(freq, data_fft_abs)
 plt.xlabel("frequency, Hz")
 plt.ylabel("Amplitude, units")
-plt.show()
+plt.show()"""
 ```
 
 Daha sonra 
